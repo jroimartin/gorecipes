@@ -17,17 +17,19 @@ func init() {
 		one.CmdOne,
 		two.CmdTwo,
 	}
+
+	base.Usage = mainUsage
 }
 
 func main() {
 	log.SetFlags(0)
 
-	flag.Usage = usage
+	flag.Usage = base.Usage
 	flag.Parse()
 
 	args := flag.Args()
 	if len(args) < 1 {
-		usage()
+		base.Usage()
 	}
 
 	if args[0] == "help" {
@@ -49,7 +51,7 @@ func main() {
 	os.Exit(2)
 }
 
-func usage() {
+func mainUsage() {
 	help.PrintUsage()
 	os.Exit(2)
 }

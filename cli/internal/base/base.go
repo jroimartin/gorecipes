@@ -31,3 +31,5 @@ func (c *Command) Usage() {
 	fmt.Fprintf(os.Stderr, "Run 'cli help %s' for details.\n", c.Name())
 	os.Exit(2)
 }
+
+var Usage func()
