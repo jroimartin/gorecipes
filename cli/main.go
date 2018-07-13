@@ -1,3 +1,4 @@
+// cli is a reference for CLI applications based on the Go tool.
 package main
 
 import (
