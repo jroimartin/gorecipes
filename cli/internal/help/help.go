@@ -2,9 +2,9 @@ package help
 
 import (
 	"fmt"
-	"html/template"
 	"os"
 	"strings"
+	"text/template"
 
 	"github.com/jroimartin/gorecipes/cli/internal/base"
 )
